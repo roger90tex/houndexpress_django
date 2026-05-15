@@ -1,52 +1,55 @@
 # Hound Express Backend
 
-Proyecto backend desarrollado con Django y Django REST Framework para la gestión de estatus de envíos de la paquetería Hound Express.
+Backend desarrollado con Django REST Framework para gestionar envíos, clientes y datos de rastreo del sistema Hound Express.
+
+---
 
 ## Descripción
 
-Este proyecto permite administrar el registro de envíos y sus estatus mediante un API REST, almacenando la información en una base de datos para futuras consultas.
+Este proyecto funciona como API REST para el frontend de Hound Express. Permite administrar registros de envíos mediante endpoints que pueden ser consumidos desde una aplicación React + TypeScript.
 
-## Funcionalidades
+---
 
-- Crear envíos
-- Consultar envíos
-- Actualizar estatus de envíos
-- Eliminar registros
-- Administración desde panel Django Admin
-- API REST con Django REST Framework
-
-## Tecnologías utilizadas
+## Tecnologías
 
 - Python
 - Django
 - Django REST Framework
 - SQLite
+- Git / GitHub
 
-## Estructura principal
+---
 
-- `config/`: configuración general del proyecto
-- `shipments/`: app principal para envíos y estatus
-- `manage.py`: administrador del proyecto
+## Funcionalidades
+
+- Registro de envíos
+- Consulta de envíos
+- Actualización de información de guías
+- Eliminación de registros
+- Exposición de datos mediante API REST
+- Integración con frontend en React
+
+---
 
 ## Modelo principal
 
-`ShipmentStatus`
+El sistema maneja información básica de envíos como:
 
-Campos:
-- `tracking_number`
-- `customer_name`
-- `origin`
-- `destination`
-- `status`
-- `description`
-- `created_at`
-- `updated_at`
+- Número de guía
+- Nombre del cliente
+- Origen
+- Destino
+- Estado del envío
+- Descripción
+- Fecha de creación
+- Fecha de actualización
 
-## Instalación y ejecución
+---
 
-1. Clonar el repositorio
-2. Crear entorno virtual
-3. Instalar dependencias:
+## Instalación y uso
+
+### 1. Clonar el repositorio
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/roger90tex/houndexpress_django.git
+cd houndexpress_django
